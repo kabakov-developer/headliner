@@ -1,0 +1,75 @@
+.header-modal
+	.modal-dialog
+		margin 0
+		padding 0
+		max-width 100%
+		.modal-content
+			padding-bottom 100px
+			border-radius 0
+			background-image linear-gradient(-225deg, #761e92 0%, #0b2893 51%, #0088dc 100%)
+			.modal-header
+				justify-content space-between
+				align-items center
+				padding 25px 1rem 1rem 1rem
+				border-bottom none
+				.close
+					opacity 1
+					padding 0
+					// margin 26px -1rem -1rem auto
+				.close *
+					color $white
+			.circle
+				border 1px solid $orange
+				border-radius 50%
+				width 44px
+				height 44px
+				display inline-block
+				line-height 38px
+				text-align center
+			.logo
+				color $white
+				font-size 20px
+				font-weight 900
+				line-height 1
+		.modal-body-container
+			display flex
+			flex-direction column
+			align-items flex-end
+			.item-title
+				margin-bottom 30px
+			.item-title *,
+			.item-title
+				color $white
+				font-size 16px
+				font-weight 400
+				line-height 1
+				letter-spacing 2.91px
+				text-align right
+				cursor pointer
+				&:hover
+					color $orange
+
+			.title-dropdown
+				position relative
+				&:before
+					content url(/img/icons/triangle.png)
+					position absolute
+					right 100px
+					top -3px
+				ul.dropdown.show
+					display block
+				ul.dropdown
+					// position absolute
+					display none
+					top 10px
+					left 0
+					padding 0
+					margin 0 0 20px 0
+					li
+						list-style-type none
+						margin-bottom 23px
+						a
+							color $orange
+							font-size 14px
+							font-weight 400
+							line-height 1

@@ -1,0 +1,19 @@
+font_generate(font_folder, font_name, font_family, font_weight = 'normal', font_style = 'normal'){
+
+	prefix = "../fonts/" + font_folder + '/' + font_name
+
+	@font-face {
+		font-family font_family
+		src url(prefix + '.woff') format('woff')
+		font-weight font_weight
+		font-style font_style
+	}
+}
+
+
+font_generate('CeraPro', 'CeraPro-Thin', 	'CeraPro', 	100)
+font_generate('CeraPro', 'CeraPro-Light', 	'CeraPro', 	300)
+font_generate('CeraPro', 'CeraPro-Medium', 	'CeraPro', 	400)
+font_generate('CeraPro', 'CeraPro-Regular', 'CeraPro', 	500)
+font_generate('CeraPro', 'CeraPro-Bold', 	'CeraPro', 	700)
+font_generate('CeraPro', 'CeraPro-Black', 	'CeraPro', 	800)

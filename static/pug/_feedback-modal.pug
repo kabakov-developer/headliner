@@ -1,0 +1,20 @@
+.modal.fade.feedback-modal#feedbackModal
+	.modal-dialog
+		.modal-content
+			.modal-header(style="background-image: url(/img/modal/modal-header.png), linear-gradient(-21deg, #ff5967 0%, #ffbc50 99%, #ffbc50 100%)")
+				.header-title ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+				.header-sub-title Укажите ваши актуальные данные и мы свяжемся с вами в течение 15 минут
+				a.circle(href="" data-dismiss="modal")
+					img(src="/img/icons/across.png" alt="across")
+					//- i.far.fa-times-circle(data-dismiss="modal")
+			.modal-body
+				.modal-body-container#modal-anchor
+					form(method="POST" action="send.php")
+						.form-item
+							input.input(type="text" placeholder="Ваше имя" name="first_name")
+						.form-item
+							input.input.phone-form(type="text" placeholder="Телефон" name="phone")
+						.form-item
+							input.input(type="email" placeholder="E-mail" name="email")
+						.form-item-submit
+							input.submit(type="submit" name="submit" value="оставить заявку")

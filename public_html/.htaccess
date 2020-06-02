@@ -1,0 +1,71 @@
+#order deny,allow 
+#deny from all 
+#allow from 79.142.55.137
+#allow from 127.0.0.1
+#allow from 172.17.0.0/24
+
+AddType application/x-httpd-php .4d
+AddDefaultCharset utf-8
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+php_value display_errors 1
+php_value session.gc_maxlifetime "864000"
+php_value session.cookie_lifetime "864000"
+
+ErrorDocument 404 /index.php?error=404
+ErrorDocument 403 /index.php?error=403
+
+RewriteEngine on
+DirectoryIndex index.html
+
+RedirectMatch 403 ^/.git/?(.*)$
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^extaz.kz$
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteRule ^rubric\/?([0-9,a-z,A-Z,_]+)$ 		index.php?real_url=/rubric/$1&controller=rubric&action=index&furl=$1 [QSA]
+RewriteRule ^product/show\/?([0-9,a-z,A-Z,_]+)$ 		index.php?real_url=/product/$1&controller=product&action=show&furl=$1 [QSA]
+RewriteRule ^product/list/category\/?([0-9,a-z,A-Z,_]+)$ 		index.php?real_url=/product/list/$1&controller=product&action=list&furl=$1 [QSA]
+
+# Базовый роут
+RewriteRule ^admin\/?([0-9,a-z,A-Z,_]+)?/?([0-9,a-z,A-Z,_]+)?\/?([0-9]+)?$ admin/index.php?controller=$1&action=$2&id=$3 [QSA]
+RewriteRule ^(([0-9,a-z,A-Z,_]+)?/?([0-9,a-z,A-Z,_]+)?\/?([0-9]+)?)?$ index.php?real_url=$1&controller=$2&action=$3&id=$4 [QSA]
+
+############ Старые реврайты ведут на новый медиа
+# Изменение размера изображения в процентах (00 и 100 - без изменений)
+RewriteRule ^images/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=index&w=$1&imagename=$2
+RewriteRule ^images/w/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_canvas&w=$1&imagename=$2
+RewriteRule ^images/w/norm/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&w=$1&imagename=$2
+RewriteRule ^images/h/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_canvas&h=$1&imagename=$2
+RewriteRule ^images/h/norm/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&h=$1&imagename=$2
+RewriteRule ^images/all/norm/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&w=$1&h=$2&imagename=$3
+
+# Атоматический кроп и ресайз изображения, в зависимости от пропорций
+RewriteRule ^images/fit/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=fit&w=$1&h=$2&imagename=$3
+
+############## Новые реврайты
+
+# Crop изобажения
+RewriteRule ^images/crop/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=crop&w=$1&h=$2&imagename=$3
+RewriteRule ^images/crop_top/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=crop_top&w=$1&h=$2&imagename=$3
+RewriteRule ^images/crop_square/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=crop_top&w=$1&h=$1&imagename=$2
+
+# Изменение размера изображения
+RewriteRule ^images/resize/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&w=$1&h=$2&imagename=$3
+RewriteRule ^images/resize/h/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&h=$1&imagename=$2
+RewriteRule ^images/resize/w/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize&w=$1&imagename=$2
+
+# Изменение размера изображения, сохраняя пропорции
+RewriteRule ^images/resize_stretch/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_stretch&w=$1&h=$2&imagename=$3
+RewriteRule ^images/resize_stretch/h/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_stretch&h=$1&imagename=$2
+RewriteRule ^images/resize_stretch/w/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_stretch&w=$1&imagename=$2
+
+# Изменение размера изображения с заливкой свободного пространства
+RewriteRule ^images/resize_canvas/([0-9]{2,4})/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_canvas&w=$1&h=$2&imagename=$3
+RewriteRule ^images/resize_canvas/h/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_canvas&h=$1&imagename=$2
+RewriteRule ^images/resize_canvas/w/([0-9]{2,4})/([0-9,a-z,A-Z,\-,_]+).jpg$ index.php?controller=media&action=resize_canvas&w=$1&imagename=$2
+

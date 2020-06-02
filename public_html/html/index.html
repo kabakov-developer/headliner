@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0, shrink-to-fit=no"/>
+		<title>headliner</title>
+		<link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../vendor/slick-slider/slick-theme.css"/>
+		<link rel="stylesheet" href="../vendor/slick-slider/slick.css"/>
+		<link rel="stylesheet" href="../fonts/fontawesome/all.min.css"/>
+		<link rel="stylesheet" href="../css/style.css"/>
+		<meta name="theme-color" content="#3A94FE"/>
+	</head>
+	<body>
+		<main class="page-content">
+			<header>
+				<div class="container-fluid">
+					<div class="header-block">
+						<div class="logo-block">
+							<div class="logo-pre-title">АГЕНТСТВО НЕДВИЖИМОСТИ</div>
+							<div class="logo-title">FLAGMAN ESTATE</div>
+							<div class="logo-img">
+								<div class="img" style="background-image: url(/img/icons/logo-text.png)"></div>
+							</div>
+						</div>
+						<div class="contacts-block">
+							<div class="block-item">
+								<div class="item-title">ТЕЛЕФОН</div>
+								<div class="link"><a href="tel:89991234567">+7 999 123 4567</a></div>
+							</div>
+							<div class="block-item">
+								<div class="item-title">E-MAIL</div>
+								<div class="link"><a href="mailto:flagmanestate@mail.ru">flagmanestate@mail.ru</a></div>
+							</div>
+							<div class="block-modal"><a href="#" data-toggle="modal" data-target="#headerModal">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main-page">
+				<section class="preview" style="background-image: url(/img/preview/preview-bg.jpg">
+					<div class="container-fluid">
+						<div class="titles">
+							<div class="preview-title">В ЦЕНТРЕ ЖИЗНИ <br> МЕГАПОЛИСА</div>
+							<div class="preview-bottom-title">Квартал Headliner —</div>
+						</div>
+					</div>
+				</section>
+				<div class="modal fade feedback-modal" id="feedbackModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header" style="background-image: url(/img/modal/modal-header.png), linear-gradient(-21deg, #ff5967 0%, #ffbc50 99%, #ffbc50 100%)">
+								<div class="header-title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+								<div class="header-sub-title">Укажите ваши актуальные данные и мы свяжемся с вами в течение 15 минут</div><a class="circle" href="" data-dismiss="modal"><img src="/img/icons/across.png" alt="across"/></a>
+							</div>
+							<div class="modal-body">
+								<div class="modal-body-container" id="modal-anchor">
+									<form method="POST" action="send.php">
+										<div class="form-item">
+											<input class="input" type="text" placeholder="Ваше имя" name="first_name"/>
+										</div>
+										<div class="form-item">
+											<input class="input phone-form" type="text" placeholder="Телефон" name="phone"/>
+										</div>
+										<div class="form-item">
+											<input class="input" type="email" placeholder="E-mail" name="email"/>
+										</div>
+										<div class="form-item-submit">
+											<input class="submit" type="submit" name="submit" value="оставить заявку"/>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade header-modal" id="headerModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header"><a class="logo" href="#">Hard Workers</a><a class="circle" href="" data-dismiss="modal"><img src="/img/icons/across.png" alt="across"/></a></div>
+							<div class="modal-body">
+								<div class="modal-body-container" id="modal-anchor">
+									<div class="body-item">
+										<div class="item-title title-dropdown">УСЛУГИ
+											<ul class="dropdown">
+												<li><a href="">УСЛУГА ПЕРВАЯ</a></li>
+												<li><a href="">ВТОРАЯ УСЛУГА</a></li>
+												<li><a href="">УСЛУГА ТРИ</a></li>
+											</ul>
+										</div>
+										<div class="item-title"><a href="">О КОМПАНИИ</a></div>
+										<div class="item-title"><a href="">КОНТАКТЫ</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/plyr/plyr.min.js"></script>
+		<script src="../vendor/input-mask/jquery.inputmask.js"></script>
+		<script src="../vendor/slick-slider/slick.min.js"></script>
+		<script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="../fonts/fontawesome/all.min.js"></script>
+		<script src="../vendor/audio/audiojs/audio.min.js"></script>
+		<script src="../vendor/sly-slider/sly.min.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=43baa0d6-1da3-419b-87f8-02a3bdf3057e&amp;lang=ru_RU" type="text/javascript"></script>
+		<script src="../js/all.min.js"></script>
+	</body>
+</html>

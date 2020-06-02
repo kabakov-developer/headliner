@@ -1,0 +1,143 @@
+header
+	position absolute
+	width 100%
+	z-index 10
+	// padding-top 50px
+	// @media lg
+	// 	padding-top 40px
+	// @media md-all
+	// 	padding-top 25px
+	.header-block
+		display flex
+		justify-content space-between
+		// align-items flex-end
+		// @media md-all
+		// 	align-items center
+		.block-items
+			display flex
+			justify-content space-between
+			align-items flex-end
+	.logo-block
+		display flex
+		flex-direction column
+		background-color $black
+		padding 35px 100px 35px 35px
+		position relative
+		@media lg
+			padding 35px 75px 35px 35px
+		@media custom
+			padding 35px 75px 35px 35px
+		&:after
+			content ''
+			display block
+			position absolute
+			// bottom 0
+			// right 0
+			bottom -454px
+			right -800px
+			width 800px
+			height 455px
+			border 20px solid $red
+			z-index 0
+			// @media custom
+			@media lg
+				right -600px
+				width 600px
+		.logo-pre-title
+			margin-bottom 5px
+			color $grey
+			font-size 12px
+			font-weight 400
+			line-height 1
+			text-transform uppercase
+		.logo-title
+			color $white
+			font-size 18px
+			font-weight 800
+			line-height 1
+			text-transform uppercase
+		.logo-img
+			margin-top 75px
+			@media custom
+				margin-top 55px
+			@media lg
+				margin-top 55px
+			.img
+				width 125px
+				height 125px
+				background-size contain
+				background-repeat no-repeat
+				background-position center
+				@media custom
+					width 100px
+					height 100px
+				@media lg
+					width 100px
+					height 100px
+	.contacts-block
+		padding-top 50px
+		display flex
+		.block-item
+			&:first-child
+				margin-right 100px
+				@media lg
+					margin-right 50px
+				@media custom
+					margin-right 50px
+			&:nth-child(2)
+				margin-right 50px
+				@media lg
+					margin-right 25px
+				@media custom
+					margin-right 25px
+			.item-title
+				margin-bottom 5px
+				color $white
+				font-size 10px
+				font-weight 400
+				line-height 1
+				text-transform uppercase
+			.link
+				a
+					color $white
+					font-size 24px
+					font-weight 500
+					line-height 1
+					text-transform uppercase
+					@media lg
+						font-size 20px
+					@media custom
+						font-size 20px
+	.block-modal
+		a
+			padding 25px 35px
+			color $white
+			font-size 16px
+			font-weight 800
+			line-height 1
+			text-transform uppercase
+			background-color $red
+			@media lg
+				padding 15px
+				font-size 14px
+			@media custom
+				padding 15px
+				font-size 14px
+	.hamburger
+		display none
+		@media md-all
+			display block
+			margin-left 20px
+			width 44px
+			height 44px
+			border-radius 50%
+			border 1px solid $orange
+		i
+			display block
+			width 19px
+			height 2px
+			margin-bottom 5px
+			background-color $white
+			transform translate(11px, 13px)
+			&:last-child
+				margin-bottom 0

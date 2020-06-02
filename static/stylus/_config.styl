@@ -1,0 +1,45 @@
+$CeraPro  = 'CeraPro', 'Arial', 'Roboto',  sans-serif
+
+xs        = '(max-width: 575px)'
+sm        = '(min-width: 576px) and (max-width: 767px)'
+sm-xs	  = '(max-width: 767px)'
+md        = '(min-width: 768px) and (max-width: 991px)'
+md-all    = '(min-width: 320px) and (max-width: 991px)'
+lg        = '(min-width: 992px) and (max-width: 1199px)'
+xl        = '(min-width: 1200px)'
+custom-xl = '(min-width: 1400px)'
+custom    = '(min-width: 1201px) and (max-width: 1425px)'
+
+
+$white     		= rgb(255, 255, 255)
+$black     		= rgb(0,0,0)
+$black1			= rgba(9, 9, 9, 1)
+$grey			= #7a7a7a
+$red			= #f5263f
+
+html
+	overflow-x hidden
+
+body
+	max-width 1920px
+	margin 0 auto
+	font-family $CeraPro
+	overflow-x hidden
+
+a
+	outline none
+	&:hover
+		color $white
+		text-decoration none
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance none
+	margin 0
+
+input[type=number]
+	-moz-appearance textfield
+
+.modal.fade.show
+	padding-right 0 !important
+.modal-open
+	padding-right 0 !important

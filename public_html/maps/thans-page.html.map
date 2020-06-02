@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["thans-page.pug"],"sourcesContent":["extends _layout.pug\r\nblock content\r\n\t.thakns-page"],"file":"../pug/thans-page.html"}
