@@ -14,7 +14,7 @@
 	// 	padding-bottom 55px
 	// z-index 10
 	@media custom
-		padding-top 268px
+		padding-top 270px
 	// &:after
 	// 	content ''
 	// 	display block
@@ -27,6 +27,8 @@
 	// 	z-index 0
 	.titles
 		padding-top 100px
+		@media xs
+			padding-top 0
 	.preview-title
 		color $white
 		font-size 90px
@@ -35,6 +37,13 @@
 		text-transform uppercase
 		position relative
 		z-index 20
+		@media md-all
+			font-size 40px
+		br
+			&:first-child
+				display none
+				@media xs
+					display block
 	.preview-bottom-title
 		margin-top 86px
 		display inline-block
@@ -47,3 +56,11 @@
 		background-color $red
 		position relative
 		z-index 20
+		@media md-all
+			font-size 24px
+		@media sm-xs
+			line-height .6
+		br
+			display none
+			@media sm-xs
+				display block

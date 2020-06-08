@@ -27,6 +27,8 @@ header
 			padding 35px 75px 35px 35px
 		@media custom
 			padding 35px 75px 35px 35px
+		@media md-all
+			padding 35px
 		&:after
 			content ''
 			display block
@@ -43,6 +45,25 @@ header
 			@media lg
 				right -600px
 				width 600px
+				height: 500px
+				top: 259px
+			@media md
+				right -400px
+				width 400px
+				height 418px
+				bottom -418px
+			@media sm-xs
+				height 437px
+				bottom -437px
+				width 350px
+				right -320px
+			@media xs
+				width 200px
+				right -120px
+				// height 477px
+				// bottom -477px
+				height 377px
+				bottom -377px
 		.logo-pre-title
 			margin-bottom 5px
 			color $grey
@@ -50,18 +71,24 @@ header
 			font-weight 400
 			line-height 1
 			text-transform uppercase
+			@media md-all
+				font-size 8px
 		.logo-title
 			color $white
 			font-size 18px
 			font-weight 800
 			line-height 1
 			text-transform uppercase
+			@media md-all
+				font-size 12px
 		.logo-img
 			margin-top 75px
 			@media custom
 				margin-top 55px
 			@media lg
 				margin-top 55px
+			@media md-all
+				margin-top 50px
 			.img
 				width 125px
 				height 125px
@@ -74,9 +101,16 @@ header
 				@media lg
 					width 100px
 					height 100px
+				@media md-all
+					width 72px
+					height 72px
 	.contacts-block
 		padding-top 50px
 		display flex
+		@media lg
+			display none
+		@media md-all
+			display none
 		.block-item
 			&:first-child
 				margin-right 100px
@@ -123,15 +157,16 @@ header
 			@media custom
 				padding 15px
 				font-size 14px
-	.hamburger
+	.hamburger-modal
 		display none
+		margin-top 15px
+		width 44px
+		height 44px
+		background-color $red
+		@media lg
+			display block
 		@media md-all
 			display block
-			margin-left 20px
-			width 44px
-			height 44px
-			border-radius 50%
-			border 1px solid $orange
 		i
 			display block
 			width 19px

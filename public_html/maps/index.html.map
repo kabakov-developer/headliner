@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["index.pug"],"sourcesContent":["extends _layout.pug\r\nblock content\r\n\t.main-page\r\n\t\tinclude _preview.pug\r\n\t\tinclude _feedback-modal.pug\r\n\t\tinclude _header-modal.pug"],"file":"../pug/index.html"}
+{"version":3,"names":[],"mappings":"","sources":["index.pug"],"sourcesContent":["extends _layout.pug\r\nblock content\r\n\t.main-page\r\n\t\tinclude _preview.pug\r\n\t\tinclude _info-quarter.pug\r\n\t\tinclude _feedback-modal.pug\r\n\t\tinclude _header-modal.pug"],"file":"../pug/index.html"}
