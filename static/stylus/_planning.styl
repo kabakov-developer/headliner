@@ -4,6 +4,8 @@
 		font-size 92px
 		font-weight 800
 		text-transform uppercase
+		@media md-all
+			font-size 40px
 	.blocks
 		.block-item
 			min-height 450px
@@ -18,10 +20,15 @@
 				min-height 400px
 			@media lg
 				min-height 400px
+			@media md-all
+				min-height 280px
+				margin-bottom 25px
 			.item-header
 				display flex
 				justify-content space-between
 				padding-top 25px
+				@media sm-xs
+					width 90%
 				.header-circle
 					border-radius 50%
 					border 1px solid #c2c2c2
@@ -35,6 +42,9 @@
 						width 80px
 						height 80px
 					@media lg
+						width 80px
+						height 80px
+					@media md-all
 						width 80px
 						height 80px
 					.circle-title
@@ -51,6 +61,8 @@
 							font-size 20px
 						@media lg
 							font-size 20px
+						@media md-all
+							font-size 20px
 				.header-img
 					width 180px
 					height 180px
@@ -60,24 +72,33 @@
 					@media lg
 						width 160px
 						height 160px
+					@media md-all
+						width 120px
+						height 120px
 					.img
 						width 100%
 						height 100%
 						background-size auto
 						background-repeat no-repeat
 						background-position top
+						@media md-all
+							background-size cover
 			.body-text
 				.text-title
 					color #202020
 					font-size 24px
 					font-weight 800
 					line-height 1.5
+					@media md-all
+						font-size 18px
 				.text-sub-title
 					color #747474
 					font-size 16px
 					font-weight 400
 					line-height 1
 					text-transform uppercase
+					@media md-all
+						font-size 14px
 			.footer-call
 				width 100%
 				display flex
@@ -89,6 +110,9 @@
 					background-color #f5263f
 					width 209px
 					height 61px
+					@media md-all
+						width 160px
+						height 50px
 					a
 						color $white
 						font-size 16px
@@ -112,14 +136,20 @@
 			min-height 700px
 			padding-top 80px
 			padding-bottom 80px
-			padding-left 40px
-			padding-right 40px
+			padding-left 30px
+			padding-right 30px
 		@media custom
 			min-height 800px
 			padding-top 80px
 			padding-bottom 80px
 			padding-left 40px
 			padding-right 40px
+		@media md-all
+			min-height 400px
+			padding-left 20px
+			padding-right 20px
+			padding-top 70px
+			padding-bottom 40px
 		&:before
 			content ''
 			display inline-block
@@ -135,9 +165,13 @@
 			font-size 16px
 			font-weight 400
 			text-transform uppercase
+			@media sm-xs
+				font-size 12px
 		.get-planning
 			margin-top 120px
 			box-shadow 0 31px 49px rgba(245, 38, 63, 0.44)
+			@media md-all
+				margin-top 50px
 			a
 				padding 15px 40px
 				color $white
@@ -146,21 +180,48 @@
 				text-transform uppercase
 				background-color #f5263f
 				@media lg
-					padding 15px 30px
+					padding 15px 18px
+					font-size 12px
+
 				@media custom
 					padding 15px 30px
+				@media md-all
+					font-size 12px
+					padding 12px 18px
 	.procent-block
 		margin-top 45px
 		display flex
 		justify-content space-between
 		align-items center
+		@media lg
+			align-items flex-start
+		@media md-all
+			align-items flex-start
 		.procent
 			color #f5263f
 			font-size 52px
 			font-weight 800
+			@media lg
+				font-size 34px
+				line-height 1
+				margin-right 5px
+			@media md-all
+				font-size 34px
+				line-height 1
+				margin-right 5px
 		.procent-text
 			color $white
 			font-size 16px
 			font-weight 300
+			@media lg
+				font-size 14px
+				line-height 1.1
+				br
+					display none
+			@media md-all
+				font-size 14px
+				line-height 1.1
+				br
+					display none
 			span
 				color #87787a

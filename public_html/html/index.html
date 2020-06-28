@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../vendor/slick-slider/slick-theme.css"/>
 		<link rel="stylesheet" href="../vendor/slick-slider/slick.css"/>
 		<link rel="stylesheet" href="../fonts/fontawesome/all.min.css"/>
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=43baa0d6-1da3-419b-87f8-02a3bdf3057e&amp;lang=ru_RU" type="text/javascript"></script>
 		<link rel="stylesheet" href="../css/style.css"/>
 		<meta name="theme-color" content="#3A94FE"/>
 	</head>
@@ -140,7 +141,7 @@
 					<div class="container-fluid">
 						<div class="planning-title">ПЛАНИРОВКИ</div>
 						<div class="blocks row">
-							<div class="col-lg-3 col-12">
+							<div class="col-lg-4 col-md-6 col-sm-6 col-12">
 								<div class="block-item">
 									<div class="item-header">
 										<div class="header-circle">
@@ -178,7 +179,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3 col-12">
+							<div class="col-lg-4 col-md-6 col-sm-6 col-12">
 								<div class="block-item">
 									<div class="item-header">
 										<div class="header-circle">
@@ -216,7 +217,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 col-12">
+							<div class="col-lg-4 col-md-6 col-sm-4 col-12">
 								<div class="info-block" style="background-image: url(/img/planning/right-block-bg.png)">
 									<div class="block-text">Жилой комплекс предлагает планировочные решения самых удобных эргономичных форматов. Студии площадью от 29,5 м2, 1-, 2-, -3 и 4-комнатные квартиры площадью 40-120 м2 с черновой и чистовой отделкой. На выбор представлены также три варианта готовой дизайнерской отделки «под ключ»</div>
 									<div class="body-block">
@@ -230,6 +231,41 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<section class="img-section">
+					<div class="container-fluid">
+						<div class="row block-img">
+							<div class="col-lg-6">
+								<div class="row first-row">
+									<div class="col-lg-12 item-img img-lg">
+										<div class="img" style="background-image: url(/img/img-section/1.jpg)"></div>
+									</div>
+									<div class="col-lg-6 col-6 item-img img-sm">
+										<div class="img" style="background-image: url(/img/img-section/2.jpg)"></div>
+									</div>
+									<div class="col-lg-6 col-6 item-img img-sm">
+										<div class="img" style="background-image: url(/img/img-section/3.jpg)"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 second-row">
+								<div class="row">
+									<div class="col-lg-6 col-6 item-img img-sm">
+										<div class="img" style="background-image: url(/img/img-section/4.jpg)"></div>
+									</div>
+									<div class="col-lg-6 col-6 item-img img-sm">
+										<div class="img" style="background-image: url(/img/img-section/5.jpg)"></div>
+									</div>
+									<div class="col-lg-12 item-img img-lg">
+										<div class="img" style="background-image: url(/img/img-section/6.jpg)"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="map">
+					<div id="map"></div>
 				</div>
 				<div class="modal fade feedback-modal" id="feedbackModal">
 					<div class="modal-dialog">
@@ -276,13 +312,38 @@
 					</div>
 				</div>
 			</div>
+			<footer>
+				<div class="container-fluid">
+					<div class="footer-block">
+						<div class="block-item">
+							<div class="logo">
+								<div class="img" style="background-image: url(/img/footer/logo.png)"></div>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="item-title title--grey">АГЕНТСТВО НЕДВИЖИМОСТИ</div>
+							<div class="item-sub-title">FLAGMAN ESTATE</div>
+						</div>
+						<div class="block-item">
+							<div class="item-title title--red">ТЕЛЕФОН</div>
+							<div class="phone"><a href="tel:89991234567">+7 999 123 4567</a></div>
+						</div>
+						<div class="block-item">
+							<div class="item-title title--red">E-MAIL</div>
+							<div class="email"><a href="mailto: flagmanestate@mail.ru">flagmanestate@mail.ru</a></div>
+						</div>
+						<div class="block-item">
+							<div class="get-call"><a href="#">ЗАКАЗАТЬ ЗВОНОК</a></div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</main>
 		<script src="../vendor/jquery/jquery.min.js"></script>
 		<script src="../vendor/input-mask/jquery.inputmask.js"></script>
 		<script src="../vendor/slick-slider/slick.min.js"></script>
 		<script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
 		<script src="../fonts/fontawesome/all.min.js"></script>
-		<script src="https://api-maps.yandex.ru/2.1/?apikey=43baa0d6-1da3-419b-87f8-02a3bdf3057e&amp;lang=ru_RU" type="text/javascript"></script>
 		<script src="../js/all.min.js"></script>
 	</body>
 </html>

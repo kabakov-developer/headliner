@@ -1,0 +1,83 @@
+footer
+	padding 50px 0
+	background-color #363636
+	@media md-all
+		padding 30px 0
+	.footer-block
+		display flex
+		justify-content space-between
+		align-items center
+		@media md-all
+			flex-direction column
+		.block-item
+			@media md-all
+				margin-bottom 15px
+			.logo
+				.img
+					width 125px
+					height 125px
+					background-size contain
+					background-position center
+					background-repeat no-repeat
+					@media lg
+						width 110px
+						height 110px
+			.item-title
+				font-size 12px
+				font-weight 400
+				line-height 1.1
+				text-transform uppercase
+				@media md-all
+					text-align center
+			.title--grey
+				color #7a7a7a
+			.title--red
+				color $red
+			.item-sub-title,
+			.item-sub-title *
+				color $white
+				font-size 18px
+				font-weight 800
+				line-height 1.1
+				text-transform uppercase
+				@media lg
+					font-size 16px
+				@media md-all
+					font-size 12px
+					text-align center
+			.phone
+				a
+					color $white
+					font-size 24px
+					font-weight 500
+					line-height 1.1
+					text-transform uppercase
+					@media lg
+						font-size 20px
+					@media md-all
+						font-size 18px
+			.email
+				a
+					color $white
+					font-size 18px
+					font-weight 500
+					line-height 1.1
+					text-transform uppercase
+					@media lg
+						font-size 16px
+			.get-call
+				border 3px solid $red
+				a
+					display inline-block
+					padding 20px 50px
+					color $white
+					font-size 16px
+					font-weight 800
+					line-height 1
+					text-transform uppercase
+					@media lg
+						padding 18px 30px
+						font-size 14px
+					@media md-all
+						padding 18px 30px
+						font-size 14px
