@@ -4,7 +4,7 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0, shrink-to-fit=no"/>
-		<title>headliner</title>
+		<title>Headliner</title>
 		<link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css"/>
 		<link rel="stylesheet" href="../vendor/slick-slider/slick-theme.css"/>
 		<link rel="stylesheet" href="../vendor/slick-slider/slick.css"/>
@@ -34,7 +34,7 @@
 								<div class="item-title">E-MAIL</div>
 								<div class="link"><a href="mailto:flagmanestate@mail.ru">flagmanestate@mail.ru</a></div>
 							</div>
-							<div class="block-modal"><a href="#" data-toggle="modal" data-target="#getPlaningAndPrice">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
+							<div class="block-modal"><a href="mailto: flagmanestate@mail.ru">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
 						</div>
 						<div class="hamburger-modal"><a href="#" data-toggle="modal" data-target="#headerModal"><i></i><i></i><i></i></a></div>
 					</div>
@@ -150,7 +150,7 @@
 								</div>
 							</div>
 							<div class="block borders-block">
-								<form class="form" action="#">
+								<form class="form" action="send.php" method="POST">
 									<div class="form-title">СКАЧАТЬ ПОДРОБНУЮ <br> ПРЕЗеНТАЦИЮ</div>
 									<div class="form-input">
 										<input type="text" name="first_name" placeholder="ВАШЕ ИМЯ"/>
@@ -159,7 +159,7 @@
 										<input class="phone-form" type="text" name="fhone" placeholder="ТЕЛЕФОН"/>
 									</div>
 									<div class="form-submit">
-										<input type="submit" value="СКАЧАТЬ"/>
+										<input type="submit" value="СКАЧАТЬ" onclick="window.open('/files/presentation.pdf')"/>
 									</div>
 								</form>
 							</div>
@@ -286,7 +286,7 @@
 								<div class="info-block" style="background-image: url(/img/planning/right-block-bg.png)">
 									<div class="block-text">Жилой комплекс предлагает планировочные решения самых удобных эргономичных форматов. Студии площадью от 29,5 м2, 1-, 2-, -3 и 4-комнатные квартиры площадью 40-120 м2 с черновой и чистовой отделкой. На выбор представлены также три варианта готовой дизайнерской отделки «под ключ»</div>
 									<div class="body-block">
-										<div class="get-planning"><a href="#">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
+										<div class="get-planning"><a href="mailto: flagmanestate@mail.ru">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
 										<div class="procent-block">
 											<div class="procent">%</div>
 											<div class="procent-text"><span>Также вышлем</span> специальные предложения <br><span>от застройщика со </span>скидкой 7%</div>
@@ -338,10 +338,10 @@
 							<div class="block human">
 								<div class="block-item">
 									<div class="titles">
-										<div class="item-title">Небоскребы для жизни с благоустроенной территорией</div>
+										<div class="main-title">Небоскребы для жизни с благоустроенной территорией</div>
 										<div class="item-red-items">
-											<div class="item-ttitle"></div>
-											<div class="item-ttitle"></div>
+											<div class="item-ttitle">ИПОТЕКА ОТ 6,4%</div>
+											<div class="item-ttitle">РАССРОЧКА</div>
 										</div>
 									</div>
 									<div class="bottom-text">
@@ -361,7 +361,7 @@
 								</div>
 							</div>
 							<div class="block borders-block">
-								<form class="form" action="#">
+								<form class="form" action="send.php" method="POST">
 									<div class="form-title">ПОЛУЧИТЬ СПЕЦИАЛЬНЫЕ <br> ПРЕДЛОЖЕНИЯ</div>
 									<div class="form-subtitle">ПРЕДЛОЖЕНИЯ БУДУТ ДОСТУПНЫ <span>СРАЗУ ПОСЛЕ <br> ЗАПОЛНЕНИЯ ФОРМЫ</span></div>
 									<div class="form-input">
@@ -413,8 +413,8 @@
 							<div class="modal-body">
 								<div class="modal-body-container" id="modal-anchor">
 									<div class="body-item">
-										<div class="item-title"><a href="">УСЛУГИ</a></div>
-										<div class="item-title"><a href="">О КОМПАНИИ</a></div>
+										<div class="item-title"><a href="">ПЛАНИРОВКИ</a></div>
+										<div class="item-title"><a href="">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</a></div>
 										<div class="item-title"><a href="">КОНТАКТЫ</a></div>
 									</div>
 								</div>

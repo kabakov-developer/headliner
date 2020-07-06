@@ -9,11 +9,11 @@ section.download-presentation(style="background-image: url(/img/download-present
 						.item-subtitle HEADLINER
 					.bottom-text ПОЛУЧИТЕ ПРЕЗЕНТАЦИЮ ЖИЛОГО КОМПЛЕКСА, А ТАКЖЕ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ О СПЕЦИАЛЬНЫХ ПРЕДЛОЖЕНИЯХ ОТ ИНВЕСТОРОВ
 			.block.borders-block
-				form.form(action="#")
+				form.form(action="send.php" method="POST")
 					.form-title СКАЧАТЬ ПОДРОБНУЮ <br> ПРЕЗеНТАЦИЮ
 					.form-input
 						input(type="text" name="first_name" placeholder="ВАШЕ ИМЯ")
 					.form-input
 						input.phone-form(type="text" name="fhone" placeholder="ТЕЛЕФОН")
 					.form-submit
-						input(type="submit" value="СКАЧАТЬ")
+						input(type="submit" value="СКАЧАТЬ" onclick="window.open('/files/presentation.pdf')")
