@@ -150,6 +150,7 @@
 			padding-right 20px
 			padding-top 70px
 			padding-bottom 40px
+			background-size cover
 		&:before
 			content ''
 			display inline-block
@@ -164,7 +165,10 @@
 			color $white
 			font-size 16px
 			font-weight 400
+			line-height 1.6
 			text-transform uppercase
+			@media md
+				max-width 70%
 			@media sm-xs
 				font-size 12px
 		.get-planning
@@ -180,11 +184,11 @@
 				text-transform uppercase
 				background-color #f5263f
 				@media lg
-					padding 15px 18px
+					padding 15px 9px
 					font-size 12px
-
 				@media custom
-					padding 15px 30px
+					padding 15px 12px
+					font-size 14px
 				@media md-all
 					font-size 12px
 					padding 12px 18px
@@ -195,7 +199,9 @@
 		align-items center
 		@media lg
 			align-items flex-start
-		@media md-all
+		@media md
+			align-intes center
+		@media sm-xs
 			align-items flex-start
 		.procent
 			color #f5263f

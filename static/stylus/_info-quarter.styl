@@ -35,7 +35,7 @@
 			@media md
 				font-size 20px
 			@media sm-xs
-				font-size 16px
+				font-size 18px
 	.preview-blocks
 		margin-top 65px
 		display flex
@@ -51,8 +51,9 @@
 			align-items flex-start
 			@media lg
 				flex-direction column
-			@media md-all
+			@media sm-xs
 				width 100%
+				margin-top 25px
 				margin-bottom 25px
 				justify-content flex-start
 			.item-number
@@ -68,6 +69,8 @@
 					font-size 150px
 			.item-text
 				max-width 150px
+				@media sm-xs
+					font-size 14px
 		.order-end
 			@media md-all
 				order 3
@@ -75,8 +78,39 @@
 		.block-flex
 			display flex
 			flex-direction column
-			@media md-all
+			@media sm-xs
 				width 45%
+		.block-item.img-mobile
+			display none
+			@media md-all
+				width 30%
+				display flex
+				order 4
+				margin-top 2%
+				transform translate(-1px,144px)
+				// position absolute
+				// left 255px
+				// bottom -66px
+			.item-img
+				height 165px
+				width 100%
+				// width 90px
+			.img
+				position relative
+				width 100%
+				height 100%
+				background-size cover
+				background-position center
+				background-repeat no-repeat
+				&:before
+					content ''
+					position absolute
+					left 0
+					right 0
+					top 0
+					width 100%
+					height 100%
+					background-color rgba(245, 38, 63, .6)
 		.block-item
 			position relative
 			&:first-child
@@ -117,11 +151,15 @@
 				color $white
 				font-size 16px
 				font-weight 300
-				line-height 1.1
+				line-height 1.3
 				text-transform uppercase
+				@media sm-xs
+					font-size 14px
 			.item-img
 				// width 610px
 				height 445px
+				@media sm-xs
+					height 225px
 				.img
 					width 100%
 					height 100%
@@ -140,7 +178,7 @@
 					order 1
 					position absolute
 					right 0
-					top -282px
+					display none
 			.order-2
 				@media md-all
 					order 2
@@ -196,6 +234,8 @@
 						// width 400px
 						height 367px
 						position relative
+						@media sm-xs
+							height 180px
 						&:before
 							content ''
 							position absolute
@@ -233,6 +273,8 @@
 							height 200px
 	.info-quarter-footer
 		margin-top 20px
+		@media md-all
+			margin-top 40px
 		.footer-block
 			max-width 63%
 			padding 75px 100px
