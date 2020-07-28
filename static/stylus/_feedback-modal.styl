@@ -1,45 +1,60 @@
 .modal.feedback-modal
+	padding-top 50px
+	background-color rgba(0,0,0,.7)
 	.modal-dialog
 		margin 0 auto
-		padding 50px 0 0 0
-		max-width 830px
+		max-width 640px
+		// padding 50px 0 0 0
+		background-color #252525
+		border-top 20px solid #3a3a3a
+		border-bottom 20px solid #3a3a3a
+		// max-width 830px
+		// height 673px
 		@media sm-xs
 			max-width 100%
 		.modal-content
-			padding-bottom 50px
+			// padding-bottom 50px
 			border-radius 0
 			border none
-			.modal-header
-				display flex
-				flex-direction column
-				justify-content center
-				align-items center
-				text-align center
-				padding 45px 50px 45px 50px
-				border-bottom none
-				border-radius 0
-				background-size cover
-				background-position center
-				background-repeat no-repeat
-				@media sm-xs
-					padding 35px 25px 25px 25px
-				.close
-					opacity 1
-					padding 0
+			position relative
+			// .modal-header
+			// 	display flex
+			// 	flex-direction column
+			// 	justify-content center
+			// 	align-items center
+			// 	text-align center
+			// 	padding 45px 50px 45px 50px
+			// 	border-bottom none
+			// 	border-radius 0
+			// 	background-size cover
+			// 	background-position center
+			// 	background-repeat no-repeat
+			// 	@media sm-xs
+			// 		padding 35px 25px 25px 25px
+
 					// margin 26px -1rem -1rem auto
-				.close *
-					color $white
+			.close
+				opacity 1
+				padding 0
+			.close *
+				color $white
 			.circle
 				// border 1px solid #fff
 				// border-radius 50%
 				position absolute
-				right 0
-				top 3px
+				right -60px
+				top -20px
 				width 43px
 				height 43px
 				display inline-block
 				line-height 39px
 				text-align center
+				z-index 10
+				@media md-all
+					right 20px
+					top 0
+				@media sm-xs
+					top -23px
 			.fa-times-circle
 				color #fff
 				font-size 50px
@@ -64,27 +79,64 @@
 
 	.modal-body
 		padding 0
+		background-repeat no-repeat
+		background-position center
+		background-size cover
+		background-color #252525
+
 	.modal-body-container
-		padding-top 10px
+		padding-top 60px
+		padding-bottom 60px
+		@media sm-xs
+			padding-top 30px
+		.text-block
+			padding 0 60px
+			@media sm-xs
+				padding 0 30px
+			.title
+				margin-bottom 15px
+				color $white
+				font-size 36px
+				font-weight 800
+				line-height 1.1
+				text-transform uppercase
+				@media sm-xs
+					font-size 24px
+			.sub-title
+				color #7c7c7c
+				font-size 16px
+				font-weight 400
+				text-transform uppercase
 		form
 			display flex
 			justify-content center
 			flex-direction column
 			align-items center
 			margin-top 25px
+			@media md-all
+				align-items flex-start
+			@media md
+				padding 0 60px
+			@media sm-xs
+				padding 0 30px
 			@media xs
 				width 100%
 				padding 0 10px
 		.form-item
 			margin-bottom 30px
+			// padding 0 70px
 			@media xs
 				width 100%
 			input
 				width 530px
 				height 60px
 				padding 15px
-				border 1px solid #c6c6c6
-				color #7d7d7d
+				background-color transparent
+				color $white
+				border-right none
+				border-left none
+				border-top none
+				border-bottom 1px solid #434343
 				outline none
 				@media sm
 					width 400px
@@ -93,24 +145,29 @@
 					width 100%
 					height 60px
 		.form-item-submit
+			box-shadow 0 31px 49px rgba(245, 38, 63, 0.44)
+			align-self flex-start
+			margin-left 60px
+			margin-top 50px
+			@media sm-xs
+				margin-top 20px
+				margin-left 30px
 			input
-				width 300px
-				height 60px
-				line-height 60px
-				text-align center
-				vertical-align center
+				padding 25px 45px
 				color $white
-				border none
-				font-size 18px
-				font-weight 900
+				font-size 24px
+				font-weight 800
+				line-height 1
 				text-transform uppercase
-				box-shadow 8px 20px 35px rgba(27, 79, 94, 0.4)
-				background-image linear-gradient(-41deg, #411e92 0%, #0074cb 100%)
-				border-radius 5px
-				transition all .3s linear
+				background-color $red
+				border none
 				cursor pointer
-				@media sm-xs
-					margin-top 0
-					width 290px
-					height 60px
-					line-height 60px
+				@media custom
+					padding 15px
+					font-size 18px
+				@media lg
+					padding 15px
+					font-size 20px
+				@media md-all
+					padding 20px
+					font-size 18px

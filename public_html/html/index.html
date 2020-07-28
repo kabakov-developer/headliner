@@ -34,7 +34,7 @@
 								<div class="item-title">E-MAIL</div>
 								<div class="link"><a href="mailto:flagmanestate@mail.ru">flagmanestate@mail.ru</a></div>
 							</div>
-							<div class="block-modal"><a href="mailto: flagmanestate@mail.ru">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
+							<div class="block-modal"><a href="#" data-toggle="modal" data-target="#feedbackModal">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
 						</div>
 						<div class="hamburger-modal"><a href="#" data-toggle="modal" data-target="#headerModal"><i></i><i></i><i></i></a></div>
 					</div>
@@ -227,7 +227,7 @@
 										<div class="text-sub-title">8 вариантов планировки</div>
 									</div>
 									<div class="footer-call">
-										<div class="call"><a href="tel: 89650001133">УЗНАТЬ ЦЕНЫ</a></div>
+										<div class="call"><a href="#" data-toggle="modal" data-target="#feedbackModal">УЗНАТЬ ЦЕНЫ</a></div>
 									</div>
 								</div>
 								<div class="block-item">
@@ -245,7 +245,7 @@
 										<div class="text-sub-title">8 вариантов планировки</div>
 									</div>
 									<div class="footer-call">
-										<div class="call"><a href="tel: 89650001133">УЗНАТЬ ЦЕНЫ</a></div>
+										<div class="call"><a href="#" data-toggle="modal" data-target="#feedbackModal">УЗНАТЬ ЦЕНЫ</a></div>
 									</div>
 								</div>
 							</div>
@@ -265,7 +265,7 @@
 										<div class="text-sub-title">8 вариантов планировки</div>
 									</div>
 									<div class="footer-call">
-										<div class="call"><a href="tel: 89650001133">УЗНАТЬ ЦЕНЫ</a></div>
+										<div class="call"><a href="#" data-toggle="modal" data-target="#feedbackModal">УЗНАТЬ ЦЕНЫ</a></div>
 									</div>
 								</div>
 								<div class="block-item">
@@ -283,7 +283,7 @@
 										<div class="text-sub-title">8 вариантов планировки</div>
 									</div>
 									<div class="footer-call">
-										<div class="call"><a href="tel: 89650001133">УЗНАТЬ ЦЕНЫ</a></div>
+										<div class="call"><a href="#" data-toggle="modal" data-target="#feedbackModal">УЗНАТЬ ЦЕНЫ</a></div>
 									</div>
 								</div>
 							</div>
@@ -291,7 +291,7 @@
 								<div class="info-block" style="background-image: url(/img/planning/right-block-bg.png)">
 									<div class="block-text">Жилой комплекс предлагает планировочные решения самых удобных эргономичных форматов. Студии площадью от 29,5 м2, 1-, 2-, -3 и 4-комнатные квартиры площадью 40-120 м2 с черновой и чистовой отделкой. На выбор представлены также три варианта готовой дизайнерской отделки «под ключ»</div>
 									<div class="body-block">
-										<div class="get-planning"><a href="mailto: flagmanestate@mail.ru">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
+										<div class="get-planning"><a href="#" data-toggle="modal" data-target="#feedbackModal">ПОЛУЧИТЬ ПЛАНИРОВКИ И ЦЕНЫ</a></div>
 										<div class="procent-block">
 											<div class="procent">%</div>
 											<div class="procent-text"><span>Также вышлем</span> специальные предложения <br><span>от застройщика со </span>скидкой 7%</div>
@@ -385,13 +385,13 @@
 				</section>
 				<div class="modal fade feedback-modal" id="feedbackModal">
 					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header" style="background-image: url(/img/modal/modal-header.png), linear-gradient(-21deg, #ff5967 0%, #ffbc50 99%, #ffbc50 100%)">
-								<div class="header-title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
-								<div class="header-sub-title">Укажите ваши актуальные данные и мы свяжемся с вами в течение 15 минут</div><a class="circle" href="" data-dismiss="modal"><img src="/img/icons/across.png" alt="across"/></a>
-							</div>
-							<div class="modal-body">
+						<div class="modal-content"><a class="circle" href="" data-dismiss="modal"><img src="/img/feedback-modal/close.png" alt="close"/></a>
+							<div class="modal-body" style="background-image: url(/img/feedback-modal/bg-2.png)">
 								<div class="modal-body-container" id="modal-anchor">
+									<div class="text-block">
+										<div class="title">ОБРАТНЫЙ ЗВОНОК</div>
+										<div class="sub-title">ОСТАВЬТЕ ВАШИ ДАННЫЕ, И НАШИ СПЕЦИАЛИСТЫ СВЯЖУТСЯ С ВАМИ ДЛЯ ПОДРОБНОЙ КОНСУЛЬТАЦИИ</div>
+									</div>
 									<form method="POST" action="send.php">
 										<div class="form-item">
 											<input class="input" type="text" placeholder="Ваше имя" name="first_name"/>
@@ -399,11 +399,8 @@
 										<div class="form-item">
 											<input class="input phone-form" type="text" placeholder="Телефон" name="phone"/>
 										</div>
-										<div class="form-item">
-											<input class="input" type="email" placeholder="E-mail" name="email"/>
-										</div>
 										<div class="form-item-submit">
-											<input class="submit" type="submit" name="submit" value="оставить заявку"/>
+											<input class="submit" type="submit" name="submit" value="ЗАКАЗАТЬ ЗВОНОК"/>
 										</div>
 									</form>
 								</div>
@@ -449,7 +446,7 @@
 							<div class="email"><a href="mailto: flagmanestate@mail.ru">flagmanestate@mail.ru</a></div>
 						</div>
 						<div class="block-item">
-							<div class="get-call"><a href="#">ЗАКАЗАТЬ ЗВОНОК</a></div>
+							<div class="get-call"><a href="#" data-toggle="modal" data-target="#feedbackModal">ЗАКАЗАТЬ ЗВОНОК</a></div>
 						</div>
 					</div>
 				</div>
