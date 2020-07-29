@@ -1,0 +1,21 @@
+.modal.fade.feedback-modal.planning-modal#planningModal
+	.modal-dialog
+		.modal-content
+			a.circle(href="" data-dismiss="modal")
+				img(src="/img/feedback-modal/close.png" alt="close")
+				//- i.far.fa-times-circle(data-dismiss="modal")
+			//- .modal-header(style="background-image: url(/img/modal/modal-header.png), linear-gradient(-21deg, #ff5967 0%, #ffbc50 99%, #ffbc50 100%)")
+				.header-title ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+				.header-sub-title Укажите ваши актуальные данные и мы свяжемся с вами в течение 15 минут
+			.modal-body(style="background-image: url(/img/plannig-modal/bg.png)")
+				.modal-body-container#modal-anchor
+					.text-block
+						.title ПОЛУЧИТЬ ПЛАНИРОВКИ С ЦЕНАМИ
+						.sub-title ДОПОЛНИТЕЛЬНО ВЫШЛЕМ ВАМ ИНФОРМАЦИЮ О ТЕКУЩИХ СКИДКАХ И АКЦИЯХ
+					form(method="POST" action="send.php")
+						.form-item
+							input.input(type="text" placeholder="Ваше имя" name="first_name")
+						.form-item
+							input.input.phone-form(type="text" placeholder="Телефон" name="phone")
+						.form-item-submit
+							input.submit(type="submit" name="submit" value="ЗАКАЗАТЬ ЗВОНОК")
