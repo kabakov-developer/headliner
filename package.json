@@ -27,7 +27,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.1",
     "gulp-uglify-es": "^1.0.4",
-    "gulpfile.js": "^2.3.0",
+    "gulpfile.js": "^3.2.5",
     "vue-dropdowns": "^1.0.6"
   },
   "devDependencies": {
